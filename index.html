@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa História de Amor</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontes elegantes do Google -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Menu de Navegação -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#home" class="logo">Nosso Amor</a>
+            <ul class="nav-links">
+                <li><a href="#historia">História</a></li>
+                <li><a href="#pedido">O Pedido</a></li>
+                <li><a href="#momentos">Momentos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Cabeçalho Principal -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Para Sempre Nós</h1>
+            <p>Eu te meu amor!!</p>
+        </div>
+        <!-- Elementos decorativos (corações flutuantes) -->
+        <div class="floating-hearts">
+            <div class="heart h1"></div>
+            <div class="heart h2"></div>
+            <div class="heart h3"></div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Seção 1: Nossa História -->
+        <section id="historia" class="section">
+            <h2 class="section-title">Nossa História</h2>
+            <div class="card story-card">
+                <p>
+                    Tudo começou em um dia comum, que se transformou no início da nossa eternidade. Nossos olhares se
+                    cruzaram de uma forma diferente, e desde aquele momento sabíamos que havia algo especial.
+                </p>
+                <p>
+                    Construímos nossa relação com base no respeito, na amizade sincera e em incontáveis risadas. Cada
+                    obstáculo que superamos e cada conquista que celebramos juntos só fortaleceram o nosso vínculo.
+                </p>
+                <p>
+                    A vida ao seu lado é mais leve, mais doce e cheia de significado. Esta página é uma pequena
+                    homenagem a tudo o que já vivemos e ao lindo futuro que ainda vamos construir.
+                </p>
+            </div>
+        </section>
+
+        <!-- Seção 2: O Pedido Especial -->
+        <section id="pedido" class="section">
+            <h2 class="section-title">O Pedido</h2>
+            <p class="section-subtitle">O momento perfeito em um lugar inesquecível.</p>
+            <div class="card map-card">
+                <!-- Google Maps iframe apontando para o Parque José Affonso Junqueira -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.511394593856!2d-46.56860368449747!3d-21.78505508559313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c9db98f26a7e03%3A0x6bba3bc7a61d1e4c!2sParque%20Jos%C3%A9%20Affonso%20Junqueira!5e0!3m2!1spt-BR!2sbr!4v1714574932021!5m2!1spt-BR!2sbr"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <p class="map-caption">Parque José Affonso Junqueira - Poços de Caldas, MG</p>
+        </section>
+
+        <!-- Seção 3: Nossos Momentos -->
+        <section id="momentos" class="section">
+            <h2 class="section-title">Nossos Momentos</h2>
+            <p class="section-subtitle">Retratos de uma vida a dois.</p>
+            <div class="gallery">
+                <!-- Placeholders para as fotos -->
+                <div class="gallery-item placeholder">
+                    <img src="img/pizza.jpg" alt="pizza" class="gallery-img">
+                </div>
+                <div class="gallery-item placeholder horizontal">
+                    <span class="placeholder-text">Sua Foto Aqui<br>(Horizontal)</span>
+                </div>
+                <div class="gallery-item placeholder">
+                    <img src="img/natal.jpg" alt="natal" class="gallery-img">
+                </div>
+                <div class="gallery-item placeholder vertical-tall">
+                    <img src="img/revellion.jpg" alt="revellion" class="gallery-img">
+                </div>
+                <div class="gallery-item horizontal-wide">
+                    <img src="img/nossa primeira foto.jpg" alt="Nossa Foto" class="gallery-img">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>Criado com muito carinho para celebrar nosso amor. 💖</p>
+    </footer>
+
+    <!-- Script simples para navegação suave -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
