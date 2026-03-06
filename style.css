@@ -325,7 +325,6 @@ h3,
 }
 
 .gallery-item {
-    background-color: var(--secondary-color);
     border-radius: var(--border-radius);
     display: flex;
     justify-content: center;
@@ -333,39 +332,12 @@ h3,
     position: relative;
     overflow: hidden;
     box-shadow: var(--shadow-soft);
-    border: 2px dashed #fff;
     transition: transform 0.3s ease;
+    background-color: transparent;
 }
 
 .gallery-item:hover {
     transform: scale(1.02);
-}
-
-/* Opções de tamanhos variados para a galeria (Masonry falso) */
-.horizontal {
-    grid-column: span 2;
-}
-
-.vertical-tall {
-    grid-row: span 2;
-}
-
-.horizontal-wide {
-    grid-column: span 2;
-    grid-row: span 2;
-}
-
-.placeholder-text {
-    color: var(--accent-color);
-    font-family: var(--font-heading);
-    font-size: 1.2rem;
-    text-align: center;
-    opacity: 0.8;
-}
-
-.gallery-item:not(.placeholder) {
-    border: none;
-    background-color: transparent;
 }
 
 .gallery-img {
@@ -373,6 +345,51 @@ h3,
     height: 100%;
     object-fit: cover;
     border-radius: var(--border-radius);
+}
+
+/* Contador de Tempo */
+.counter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.counter-box {
+    background-color: var(--white);
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    min-width: 120px;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.counter-box:hover {
+    transform: translateY(-5px);
+}
+
+.counter-value {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.counter-label {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
 }
 
 /* Rodapé */
@@ -403,14 +420,16 @@ h3,
         grid-auto-rows: 200px;
     }
 
-    .horizontal,
-    .vertical-tall,
-    .horizontal-wide {
-        grid-column: span 1;
-        grid-row: span 1;
-    }
-
     .map-card {
         height: 300px;
+    }
+
+    .counter-box {
+        min-width: 100px;
+        padding: 1rem;
+    }
+
+    .counter-value {
+        font-size: 2rem;
     }
 }
